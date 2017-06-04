@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Users</title>
+
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/Library/font-awesome-4.5.0/css/font-awesome.min.css}">
+    <script  th:src="@{/resources/assets/jqueryUI/jquery-3.1.0.min.js}"></script>
+</head>
+
+<body>
+
+    <form th:action="@{/save}" th:method="post">
+        <input id="id" name="id" type="hidden" th:value="${user.id}">
+        <label for="usernameEdit">Username : </label>
+        <input id="usernameEdit" name="usernameEdit" type="text" th:value="${user.username}">
+        </br>
+        <label for="emailEdit">Email  : </label>
+        <input id="emailEdit" name="emailEdit" type="text" th:value="${user.email}">
+        </br>
+        <button id="save" type="submit">SAVE</button>
+    </form>
+
+    <button id="cancelEdit">CANCEL</button>
+    <button id="backToMain">MAIN</button>
+
+    <script  th:src="@{/resources/assets/js/function.js}"></script>
+</body>
+</html>
